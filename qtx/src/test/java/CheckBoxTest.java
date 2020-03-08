@@ -1,10 +1,18 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.qtx.pages.CheckboxPageobject;
+
 public class CheckBoxTest extends TestSuperClass{
-  @Test
-  public void CheckBoxSelect() {
-	  driver.navigate().to("http://the-internet.herokuapp.com/checkboxes");
-	  
-	  
-  }
+	@Test
+	public void CheckBoxSelect() {
+		boolean allCheckboxValue= new CheckboxPageobject (driver,BaseUrl)
+				.OpenCheckboxPage()
+				.SelectCheckboxs();
+				
+		Assert.assertEquals(allCheckboxValue, true, "Checkboxes are not Selected!");
+		
+		
+	}
+
 }
