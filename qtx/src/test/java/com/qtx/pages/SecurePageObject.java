@@ -11,6 +11,7 @@ public class SecurePageObject extends SuperPageObject {
 
 	public SecurePageObject(WebDriver driverInstance, String url ) {
 		super(driverInstance, url);
+		
 	}
 
 

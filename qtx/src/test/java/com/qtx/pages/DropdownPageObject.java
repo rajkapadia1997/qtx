@@ -11,20 +11,22 @@ public class DropdownPageObject extends SuperPageObject {
 		super(driverInstance, url);
 
 	}
+	//Navigate to the page url
 	public DropdownPageObject OpenDropdownPage() {
-
+        //Data
 		String url = "/dropdown";
-
+		//Act
 		Navigate(url);
 		return this;
 
 	}
-
-	public String GetDropdownList() {
+    //Performing DropdownListTest Actions
+	public String GetDropdownListValue(String Value) {
+		//Selecting the Web Element
 		Select selectByValue = new Select(driver.findElement(By.id("dropdown")));
-
-		selectByValue.selectByVisibleText("Option 2");
-		
+        //Setting the test Value 
+		selectByValue.selectByVisibleText(Value);
+		//Returning the output text
 		String Text = selectByValue.getFirstSelectedOption().getText();
 		return Text ;
 	}

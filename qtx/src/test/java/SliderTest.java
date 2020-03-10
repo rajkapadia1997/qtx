@@ -7,10 +7,11 @@ public class SliderTest extends TestSuperClass {
 	
   @Test
   public void Slidertest() {
-	   String slidervalue = new SliderPageObject(driver, BaseUrl).
-			  Navigate().
-			  SetSliderValue();
-	   
+	  //act
+	   String slidervalue = new SliderPageObject(driver, BaseUrl). //to SliderPageObject
+			  Navigate().  //Open the browser page
+			  SetSliderValue();  //set value to max and return the value
+	   //assertion
 	   Assert.assertEquals(slidervalue, "5");
 			  
   }

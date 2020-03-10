@@ -11,16 +11,16 @@ public class DropdownListTest extends TestSuperClass {
 	
 	@Test
 	public void selectOption2FromDropdown() {
-		
-		String expectedBoxText = new String("Option 2");
+		//Test Data
+		String Value = "Option 2";
 
 		// act
 		String actualBoxText = new DropdownPageObject(driver, BaseUrl)
-				.OpenDropdownPage()
-				.GetDropdownList() ;//from DropdownPageObject
+				.OpenDropdownPage() //to DropdownPageObject
+				.GetDropdownListValue(Value) ;//from DropdownPageObject
 		
 		// assert
-		Assert.assertEquals(actualBoxText, expectedBoxText, "Can not select a dropdown list value!");
+		Assert.assertEquals(actualBoxText, Value, "Can not select a dropdown list value!");
 
 	}
 

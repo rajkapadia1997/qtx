@@ -11,21 +11,22 @@ public class CheckboxPageobject extends SuperPageObject {
 		super(driverInstance, url);
 
 	}
-
+    
 	public CheckboxPageobject OpenCheckboxPage() {
 
-		String url = "/checkboxes";
+		String url = "/checkboxes"; //Navigating to checkboxes url
 
 		Navigate(url);
 		return this;
 
 	}
-
+    //Performing Action for Selecting Check Boxes
 	public boolean SelectCheckboxs() {
+		//Getting WebElement
 		WebElement checkbox1 = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]"));
 		WebElement checkbox2 = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]"));
 
-		
+		//Clicking the checkbox if not Pre slected 
 		if (!checkbox1.isSelected()) {
 			checkbox1.click();
 		}
