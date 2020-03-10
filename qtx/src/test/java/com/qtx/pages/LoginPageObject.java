@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPageObject extends SuperPageObject {
 
+	private static final String url = null;
+
 	public LoginPageObject(WebDriver driverInstance, String url) {
 
 		super(driverInstance, url);
@@ -29,7 +31,7 @@ public class LoginPageObject extends SuperPageObject {
 		userNameTextBox.sendKeys(userName);
 		passwordTextBox.sendKeys(password);
 		submitBox.click();
-		return new SecurePageObject(driver, "/secure");
+		return new SecurePageObject(driver, url);
 
 	}
 
