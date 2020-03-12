@@ -12,6 +12,6 @@ public abstract class DriverManager {
 		return driver;
 	}
 	public void quitDriver() {
-//		driver.quit();
+		driver.quit();
 	}
 }
