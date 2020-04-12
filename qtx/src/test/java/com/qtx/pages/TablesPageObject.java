@@ -20,9 +20,8 @@ public class TablesPageObject extends SuperPageObject{
 			String confirmEmail = driver.findElement(By.xpath("/html/body/div[2]/div/div/table[1]/tbody/tr["+numberOfRows+"]/td[3]")).getText();
 			System.out.println(confirmEmail);
 			
-			//not able to compare two string
 			
-			if(confirmEmail == "jdoe@hotmail.com") {
+			if(confirmEmail.equals("jdoe@hotmail.com")) {
 				String dueAmount = driver.findElement(By.xpath("/html/body/div[2]/div/div/table[1]/tbody/tr["+numberOfRows+"]/td[4]")).getText();
 				System.out.println(dueAmount);
 				return dueAmount;
