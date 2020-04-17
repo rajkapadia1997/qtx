@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public abstract class SuperPageObject {
 	protected WebDriver driver;
-	private String BaseUrl;
+	protected String BaseUrl;
 	
 	protected SuperPageObject(WebDriver driverInstance, String baseUrl) {
 		
